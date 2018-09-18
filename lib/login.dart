@@ -195,7 +195,7 @@ class _LoginState extends State<Login> {
     }).then((newUser) {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => ProductDetail()),
+        MaterialPageRoute(builder: (context) => MyHomePage()),
       );
       print("User signed in: ${newUser.email}");
     });

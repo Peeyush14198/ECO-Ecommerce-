@@ -121,7 +121,9 @@ class MessageList extends StatelessWidget {
                  Navigator.push(
                      context,
                      MaterialPageRoute(
-                         builder: (context) => ProductDetail()));
+                         builder: (context) => ProductDetail(
+                           image: document['image'],
+                         )));
                },
              );
            }),

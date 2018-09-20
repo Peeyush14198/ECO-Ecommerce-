@@ -22,6 +22,8 @@ dependencies:
   firebase_auth: ^0.5.20
   validate: ^1.7.0
   cloud_firestore: ^0.8.0
+  path_provider: ^0.4.1
+  sqflite : any
 
 dev_dependencies:
   flutter_test:

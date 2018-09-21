@@ -8,18 +8,23 @@ A new Flutter Shopping application.
 2. Firebase CloudStore Support Added
 3. Card Design
 4. Cart Value
+5. Wishlist
 
 # COMING SOON
 
-1. Add To Wishlist 
-2. Payment 
-3. Cart Page 
-4. Categories
-5. User Database
+1. Payment 
+2. Cart Page 
+3. Categories
+4. User Database
+5. To deal With Duplicate Data
 
 # IMAGES
 
 <img src = "images/ezgif.com-video-to-gif (1).gif" width = "400" height = "600"/>
+
+<img src = "Screenshot_20180921-134016" width = "400" height = "600"/>
+
+<img src = "Screenshot_20180921-134102" width = "400" height = "600"/>
 
 ## Getting Started
 

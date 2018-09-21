@@ -36,13 +36,41 @@ class _WishListState extends State<WishList> {
         centerTitle: true,
         backgroundColor: Colors.greenAccent,
       ),
-      body: new ListView.builder(itemCount: list.length,
-      itemBuilder: (context,position){
-        return Card(
-          child: Image.network(list[position]),// Add image view in python to create analysis 
-        );
-      },
-      )
+      body: new GridView.count(crossAxisCount: 2,
+          children: List.generate(list.length, (index){
+            final document = list[index];
+            return new InkWell(
+              child: new Card(
+                child: new Container(
+                  height: 124.0,
+                  decoration: new BoxDecoration(color: Colors.white,
+                      shape: BoxShape.rectangle,
+                      borderRadius: new BorderRadius.circular(8.0),
+                      boxShadow: <BoxShadow>[
+                        new BoxShadow(
+                            color: Colors.white,
+                            blurRadius: 10.0,
+                            offset: new Offset(0.0, 10.0)
+                        )
+                      ]
+                  ),
+                  child: new Container(
+                    child: new Image.network(document,fit: BoxFit.fill,
+                    ),
+                  ),
+                ),
+              ),
+              onTap: (){
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => ProductDetail(
+                          image: document,
+                        )));
+              },
+            );
+          }),
+        )
     );
   }
 }

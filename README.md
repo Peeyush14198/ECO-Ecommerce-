@@ -22,7 +22,7 @@ A new Flutter Shopping application.
 
 <img src = "images/ezgif.com-video-to-gif (1).gif" width = "400" height = "600"/>
 
-<img src = "Screenshot_20180921-134016" width = "400" height = "600"/>
+<img src = "images/Screenshot_20180921-134102.jpg" width = "400" height = "600"/>
 
 <img src = "Screenshot_20180921-134102" width = "400" height = "600"/>
 

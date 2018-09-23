@@ -9,6 +9,7 @@ A new Flutter Shopping application.
 3. Card Design
 4. Cart Value
 5. Wishlist
+6. Order 
 
 # COMING SOON
 

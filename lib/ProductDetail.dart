@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:io'as io;
+import 'package:ecommerce/order.dart';
 import 'package:ecommerce/wishlist.dart';
 import 'package:flutter/material.dart';
 import 'package:path/path.dart';
@@ -14,7 +15,7 @@ class ProductDetail extends StatefulWidget {
 
 class _ProductDetailState extends State<ProductDetail> {
 int counter=0;
-
+String size;
 static Database _db;
 
 Future<Database> get db async {
@@ -238,7 +239,10 @@ Future<String> readCounter() async {
                                     ),
                                     label: new Text('S'),
                                     onPressed: () {
-                                      print("If you stand for nothing, Burr, what’ll you fall for?");
+                                      print("Selected Size S");
+                                      setState(() {
+                                        size="S";
+                                      });
                                     }
                                 ),
                                 new Container(width: 10.2,),
@@ -248,7 +252,10 @@ Future<String> readCounter() async {
                                     ),
                                     label: new Text('M'),
                                     onPressed: () {
-                                      print("If you stand for nothing, Burr, what’ll you fall for?");
+                                      print("Selected Size M");
+                                      setState(() {
+                                        size="M";
+                                      });
                                     }
                                 ),
                                 new Container(width: 10.2,),
@@ -258,7 +265,10 @@ Future<String> readCounter() async {
                                     ),
                                     label: new Text('L'),
                                     onPressed: () {
-                                      print("If you stand for nothing, Burr, what’ll you fall for?");
+                                      print("Selected Size L");
+                                      setState(() {
+                                        size="L";
+                                      });
                                     }
                                 ),
                                 new Container(width: 10.2,),
@@ -268,7 +278,10 @@ Future<String> readCounter() async {
                                     ),
                                     label: new Text('XL'),
                                     onPressed: () {
-                                      print("If you stand for nothing, Burr, what’ll you fall for?");
+                                      print("Selected Size XL");
+                                      setState(() {
+                                        size="XL";
+                                      });
                                     }
                                 ),
                               ],
@@ -386,9 +399,14 @@ Future<String> readCounter() async {
               new Container(
                   width: (screenSize.width - 20) / 2,
                   child: new FlatButton(onPressed:(){
-                   /* readCounter().then((String value){
-                      print(value);
-                    });*/
+                    print("button pressed");
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Order(
+                              image: widget.image,
+                              size: size,
+                            )));
                   }, child: new Text(
                     "ORDER NOW",
                     textAlign: TextAlign.center,
